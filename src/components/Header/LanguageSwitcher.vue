@@ -1,6 +1,7 @@
 <script setup>
-import { ref, computed } from 'vue';
+import {ref, computed, onBeforeUnmount, onMounted} from 'vue';
 import { useI18n } from 'vue-i18n';
+import {setLocale} from "@/i18n.js";
 
 const open = ref(false);
 const { locale, t } = useI18n();
@@ -16,12 +17,23 @@ function toggle() {
 }
 
 function changeLocale(lang) {
-  locale.value = lang;
+  setLocale(lang);
+  //달콤한 유혹
+  //window.location.reload();
   open.value = false;
 }
 
-document.addEventListener('click', () => {
-  open.value = false;
+let handleClickOutside;
+
+onMounted(() => {
+  handleClickOutside = () => {
+    open.value = false;
+  };
+  document.addEventListener('click', handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleClickOutside);
 });
 </script>
 
@@ -91,5 +103,8 @@ document.addEventListener('click', () => {
 .lang-item.active {
   font-weight: 600;
   color: #b8864b;
+}
+*{
+  z-index: 999;
 }
 </style>

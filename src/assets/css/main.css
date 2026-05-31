@@ -1,0 +1,52 @@
+/* ===== 전역 레이아웃 기본 ===== */
+body {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1. 레이아웃 흔들림 방지: 스크롤바가 있든 없든 항상 트랙을 보여줌 */
+html {
+  overflow-y: scroll;
+}
+
+/* 2. 스크롤바 커스텀 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #dcb059;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+/* 사이트 공통 배경색 */
+body {
+  background-color: white;
+}
+
+/* 전체 레이아웃 기본 박스 설정(선택) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

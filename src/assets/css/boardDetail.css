@@ -1,0 +1,113 @@
+/* 리뷰 / 공지 상세 공통 카드 스타일 */
+
+.review-detail,
+.notice-detail {
+    padding: 20px 22px 18px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.review-detail .detail-header,
+.notice-detail .detail-header {
+    margin-bottom: 12px;
+}
+
+.review-detail .detail-title,
+.notice-detail .detail-title {
+    margin: 0 0 6px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #3b2f22;
+}
+
+.review-detail .detail-meta,
+.notice-detail .detail-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #a08c72;
+}
+
+.review-detail .detail-meta .left,
+.notice-detail .detail-meta .left {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.review-detail .dot,
+.notice-detail .dot {
+    opacity: 0.6;
+}
+
+.review-detail .detail-content,
+.notice-detail .detail-content {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(226, 199, 155, 0.4);
+}
+
+.review-detail .detail-text,
+.notice-detail .detail-text {
+    margin: 0;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #3b2f22;
+}
+
+.review-detail .detail-footer,
+.notice-detail .detail-footer {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.review-detail .secondary-btn,
+.review-detail .danger-btn,
+.notice-detail .secondary-btn,
+.notice-detail .danger-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 999px;
+    border: 1px solid #d7c1a0;
+    background: #fff;
+    cursor: pointer;
+}
+
+.review-detail .danger-btn,
+.notice-detail .danger-btn {
+    border-color: #d23737;
+    color: #d23737;
+}
+
+.review-detail .detail-error,
+.review-detail .detail-loading,
+.notice-detail .detail-error,
+.notice-detail .detail-loading {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #d23737;
+}
+
+/* 리뷰 전용: 좋아요 버튼 스타일 */
+.review-detail .like-btn {
+    min-width: 72px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #e2c79b;
+    background: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    transition: box-shadow 0.12s ease-out, background 0.12s ease-out;
+}
+
+.review-detail .like-btn.active {
+    background: #f9f0dd;
+    color: #c6483b;
+    border-color: #e3b89b;
+    box-shadow: 0 0 0 1px rgba(230, 155, 120, 0.4);
+}

@@ -1,28 +1,28 @@
 <script setup>
-
-import LayoutHeader from "@/components/LayoutHeader.vue";
+import "@/assets/css/main.css"
+import Footer from "@/components/Footer/Footer.vue";
+import Header from "@/components/Header/Header.vue";
 </script>
 
 <template>
 <div class="app-root">
-  <LayoutHeader />
+  <Header />
   <main class = "main-layout">
-
+    <RouterView />
   </main>
+  <Footer />
 </div>
 </template>
 
-<style scoped>
+<style>
 .app-root {
   min-height: 100vh;
-  background-color: #e7d6b6;
-  color : #4a3a2a;
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Noto Sans KR',
-  sans-serif;
+  display: flex;
+  flex-direction: column;
 }
+
+/* 메인 영역이 남는 세로 공간을 채우게 */
 .main-layout {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding : 48px 24px 80px;
+  flex: 1 0 auto;
 }
 </style>
